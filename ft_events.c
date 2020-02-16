@@ -6,7 +6,7 @@
 /*   By: abiari <abiari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/14 20:05:14 by abiari            #+#    #+#             */
-/*   Updated: 2020/02/15 21:28:32 by abiari           ###   ########.fr       */
+/*   Updated: 2020/02/16 22:44:54 by abiari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ int		key_pressed(int key)
 		g_player.pov_direction = 1;
 	if (key == 124)
 		g_player.turn_direction = 1;
-	if (key == 1)
+	if (key == 1 || key == 125)
 		g_player.walk_direction = 1;
-	if (key == 13)
+	if (key == 13 || key == 126)
 		g_player.walk_direction = -1;
 	if (key == 53)
 		destroy_window();
@@ -42,7 +42,7 @@ int		key_released(int key)
 {
 	if (key == 123 || key == 124)
 		g_player.turn_direction = 0;
-	if (key == 1 || key == 13)
+	if (key == 1 || key == 13 || key == 126 || key == 125)
 		g_player.walk_direction = 0;
 	if (key == 0 || key == 2)
 		g_player.pov_direction = 0;
